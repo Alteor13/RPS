@@ -1,1 +1,2 @@
-"""Nada pour l'instant"""
+"""Demarre une partie de RPS"""
+

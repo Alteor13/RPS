@@ -6,7 +6,7 @@ import re
 import sys
 
 def check_play_status():
-    """Vérifie qu'un joueur désire jouer à l'aide des réponses yes et no"""
+    """Verifie qu'un joueur desire jouer a l'aide des reponses yes et no"""
 
     valid_responses = ['yes', 'no']
     while True:
