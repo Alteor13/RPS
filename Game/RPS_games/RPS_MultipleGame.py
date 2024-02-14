@@ -2,9 +2,9 @@
 comprenant un stockage et une analyse des resultats des partie precedentes"""
 
 import random
-import RPS_SimpleGame
+from RPS_SimpleGame import RPS_SimpleGame as sim
 
-class RPS_MultipleGame(RPS_SimpleGame):
+class RPS_MultipleGame(sim):
 
     def __init__ (self):
         self.nom = "Nom"
@@ -17,13 +17,13 @@ class RPS_MultipleGame(RPS_SimpleGame):
         self.historique.append(c)
 
     def deux_joueurs (self):
-        choix_ordi = self.RPS_SimpleGame.choisir_ordi()
-        choix_joueur = self.RPS_SimpleGame.choisir()
+        choix_ordi = self.sim.choisir_ordi()
+        choix_joueur = self.sim.choisir()
         self.set_historique(choix_joueur)
         self.ecrire(choix_joueur)
         if choix_joueur == choix_ordi:
             return 0
-        self.RPS_SimpleGame.deux_joueurs(choix_joueur,choix_ordi)
+        self.sim.deux_joueurs(choix_joueur,choix_ordi)
 
     def ecrire (self,c):
         doc = open("%s.txt","w+" %(self.nom))
